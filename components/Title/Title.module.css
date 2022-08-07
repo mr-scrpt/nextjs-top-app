@@ -1,0 +1,26 @@
+.title {
+	margin: 0;
+	padding: 0;
+
+	color: var(--dark);
+
+	font-style: normal;
+}
+
+.title__main {
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 35px;
+}
+
+.title__middle {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+.title__sub {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 27px;
+}

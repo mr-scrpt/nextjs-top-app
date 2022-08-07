@@ -1,0 +1,129 @@
+.button {
+	position: relative;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 0;
+	padding: 0;
+
+	user-select: none;
+	white-space: nowrap;
+	text-decoration: none;
+
+	border-radius: 5px;
+	outline: 0;
+
+	touch-action: manipulation;
+
+	/* 	@include ts(background-color); */
+}
+
+.button .button__text {
+	display: inline-block;
+	overflow: hidden;
+
+	vertical-align: top;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+
+	/* @include ts(color); */
+}
+
+/* === Тип кнопкок === */
+.button.button_view_primary {
+	border: 1px solid var(--primary);
+	background: var(--primary);
+}
+
+.button.button_view_primary .button__text {
+	color: var(--accent);
+}
+
+.button.button_view_secondary {
+	border: 1px solid var(--primary);
+	background: var(--primary);
+}
+
+.button.button_view_secondary .button__text {
+	color: var(--dark);
+}
+
+/* === Тип кнопкок - КОНЕЦ === */
+
+/* === Размеры кнопок === */
+
+/* S - Начало */
+.button.button_size_s {
+	font-size: 11px;
+	line-height: 14px;
+}
+
+.button.button_size_s .button__text {
+	margin: 3px 6px;
+}
+
+/* S - КОНЕЦ */
+
+/* M - Начало */
+.button.button_size_m {
+	font-size: 13px;
+	line-height: 17px;
+}
+
+.button.button_size_m .button__text {
+	margin: 4px 7px;
+}
+
+/* M - КОНЕЦ */
+
+/* L - Начало */
+.button.button_size_l {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.button.button_size_l .button__text {
+	margin: 5px 8px;
+}
+
+/* L - КОНЕЦ */
+
+/* XL - Начало */
+.button.button_size_xl {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.button.button_size_xl .button__text {
+	margin: 6px 9px;
+}
+
+/* XL - КОНЕЦ */
+
+/* РАЗМЕРЫ - КОНЕЦ */
+
+/* === Состояния === */
+
+/* HOVER */
+.button:hover {
+	cursor: pointer;
+
+	background-color: var(--black);
+}
+
+.button:hover .button__text {
+	color: var(--black);
+}
+
+/* === Состояния - КОНЕЦ === */
+
+/* === Модификаторы === */
+
+/* На всю ширину */
+.button_width_available {
+	width: 100%;
+}
+
+/* === Модификаторы - КОНЕЦ === */
