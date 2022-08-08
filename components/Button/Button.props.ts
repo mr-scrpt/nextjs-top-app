@@ -1,10 +1,11 @@
-import { ReactNode } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-export interface ButtonProps {
-  tag: 'link' | 'button',
-  href?: string, 
-  view: 'primary' | 'secondary',
+export interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
+  
+  view: 'primary' | 'transparent',
   size: 's' | 'm' | 'l' | 'xl',
-  mod: 'standat' | 'width_available',
-  children: ReactNode
+  mode?: 'standat' | 'width_available',
+  arrow?: 'to_right' | 'to_bottom' | 'none',
+  iconPosition?: 'left' | 'right'
+  
 }

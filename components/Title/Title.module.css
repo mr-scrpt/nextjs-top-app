@@ -7,19 +7,19 @@
 	font-style: normal;
 }
 
-.title__main {
+.title.title_main .title__text {
 	font-size: 26px;
 	font-weight: 500;
 	line-height: 35px;
 }
 
-.title__middle {
+.title.title_middle .title__text {
 	font-size: 22px;
 	font-weight: 500;
 	line-height: 30px;
 }
 
-.title__sub {
+.title.title_sub .title__text {
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 27px;

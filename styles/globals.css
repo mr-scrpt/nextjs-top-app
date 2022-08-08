@@ -34,8 +34,11 @@ a {
 	--dark: #3B434E;
 	--light: #FFF;
 	--primary: #7653FC;
+	--primary-light: #896CFB;
 	--accept: #1DC37E;
 	--accept-light: rgba(var(--accept, 0.8));
 	--attantion: #FC836D;
+	--gray-light: #EBEBEB;
 	--font-family: "Noto Sans", sans-serif;
+	--tr: 0.25s;
 }

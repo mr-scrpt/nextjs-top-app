@@ -9,6 +9,8 @@
 	padding: 0;
 
 	user-select: none;
+
+	transition: background-color var(--tr), border-color var(--tr);
 	white-space: nowrap;
 	text-decoration: none;
 
@@ -25,30 +27,67 @@
 	overflow: hidden;
 
 	vertical-align: top;
-	text-transform: uppercase;
+
 	text-overflow: ellipsis;
 
 	/* @include ts(color); */
 }
 
 /* === Тип кнопкок === */
+
+/* Главная кнопка */
 .button.button_view_primary {
 	border: 1px solid var(--primary);
 	background: var(--primary);
 }
 
 .button.button_view_primary .button__text {
-	color: var(--accent);
+	color: var(--light);
 }
 
-.button.button_view_secondary {
-	border: 1px solid var(--primary);
-	background: var(--primary);
+.button.button_view_primary svg {
+	fill: var(--light);
 }
 
-.button.button_view_secondary .button__text {
+.button.button_view_primary:hover {
+	cursor: pointer;
+
+	border-color: var(--primary-light);
+
+	background-color: var(--primary-light);
+}
+
+/* Главная кнопка - КОНЕЦ */
+
+/* .button.button_view_primary:hover .button__text {
+	color: var(--black);
+} */
+
+/* Прозрачная кнопка */
+.button.button_view_transparent {
+	border: 1px solid var(--gray-light);
+	background: transparent;
+}
+
+.button.button_view_transparent .button__text {
 	color: var(--dark);
 }
+
+.button.button_view_transparent svg {
+	fill: var(--dark);
+}
+
+button.button_view_transparent:hover {
+	cursor: pointer;
+
+	background-color: var(--gray-light);
+}
+
+/* button.button_view_transparent:hover .button__text {
+	color: var(--black);
+} */
+
+/* Прозрачная кнопка - КОНЕЦ */
 
 /* === Тип кнопкок - КОНЕЦ === */
 
@@ -88,6 +127,16 @@
 	margin: 5px 8px;
 }
 
+/* .button.button_size_l.button_icon_position_right .button__text {
+	margin: 5px 0 5px 8px;
+}
+
+.button.button_size_l.button_icon_position_left .button__text {
+	order: 1;
+
+	margin: 5px 8px 5px 0;
+} */
+
 /* L - КОНЕЦ */
 
 /* XL - Начало */
@@ -100,30 +149,85 @@
 	margin: 6px 9px;
 }
 
+/* .button.button_size_xl.button_icon_position_right .button__text {
+	margin: 6px 0 6px 9px;
+}
+
+.button.button_size_xl.button_icon_position_left .button__text {
+	margin: 6px 6px 0 9px;
+} */
+
 /* XL - КОНЕЦ */
 
 /* РАЗМЕРЫ - КОНЕЦ */
 
-/* === Состояния === */
-
-/* HOVER */
-.button:hover {
-	cursor: pointer;
-
-	background-color: var(--black);
-}
-
-.button:hover .button__text {
-	color: var(--black);
-}
-
-/* === Состояния - КОНЕЦ === */
-
 /* === Модификаторы === */
 
 /* На всю ширину */
-.button_width_available {
+.button.button_width_available {
 	width: 100%;
 }
 
 /* === Модификаторы - КОНЕЦ === */
+
+/* Кнопка с иконкой */
+.button .icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button .icon svg {
+	/* position: relative;
+
+	display: inline-block; */
+
+	/* min-width: 1em; */
+
+	text-align: center;
+
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+/* Кнопка с иконкой - картинка для кнопки */
+
+.button.button_icon_position_left .icon + .button__text {
+	margin-left: 0;
+}
+
+.button.button_icon_position_right .icon + .button__text {
+	order: 0;
+
+	margin-right: 0;
+}
+
+.button.button_icon_position_right .icon {
+	order: 1;
+}
+
+.button.button_size_s .icon {
+	width: 14px;
+	margin: 0 4px;
+
+	background-size: contain;
+}
+
+.button.button_size_m .icon {
+	width: 16px;
+	margin: 0 4px;
+
+	background-size: contain;
+}
+
+.button.button_size_l .icon {
+	width: 36px;
+	height: 40px;
+	margin: 0 4px;
+}
+
+.button.button_size_xl .icon {
+	width: 42px;
+	height: 38px;
+	margin: 0 4px;
+}
