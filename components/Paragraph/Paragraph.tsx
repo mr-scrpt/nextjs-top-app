@@ -21,7 +21,8 @@ export const Paragraph = ({
     [ styles.paragraph_view_b_600 ]: weight === '600',
     [ styles.paragraph_view_b_700 ]: weight === '700',
   }, className);
-  return (
+
+  const paragraph = (
     <p
       className={ paragraphClass }
       { ...props }
@@ -29,4 +30,6 @@ export const Paragraph = ({
       {children}
     </p>
   );
+  
+  return paragraph;
 };
