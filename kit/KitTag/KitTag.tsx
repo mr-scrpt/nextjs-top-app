@@ -20,6 +20,10 @@ export const KitTag = ({ className } : KitTagProps):JSX.Element =>{
           <Tag>Основной</Tag>
         </KitRow>
 
+        <KitRow name='view: secondary'>
+          <Tag view='secondary'>Вторичный</Tag>
+        </KitRow>
+
         <KitRow name='view: transparent'>
           <Tag view='transparent'>Прозрачный</Tag>
         </KitRow>

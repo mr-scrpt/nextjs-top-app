@@ -58,6 +58,12 @@
   background-color: var(--primary);
 }
 
+.tag.tag_view_secondary .tag__inner {
+  color: var(--light);
+  border-color: var(--secondary);
+  background-color: var(--secondary);
+}
+
 .tag.tag_view_transparent .tag__inner {
   color: var(--dark);
   border-color: var(--gray-light);
@@ -87,6 +93,10 @@
   color: var(--light);
   border-color: var(--primary);
   background-color: var(--primary-light);
+}
+
+.tag.tag_view_secondary:hover .tag__inner {
+  background-color: var(--secondary-light);
 }
 
 .tag.tag_view_transparent:hover .tag__inner {

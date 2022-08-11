@@ -9,6 +9,7 @@ export const Tag = ( { className, children, size='l', view='primary' }: TagProps
     [ styles.tag_size_xl ]: size === 'xl',
 
     [ styles.tag_view_primary ]: view === 'primary',
+    [ styles.tag_view_secondary ]: view === 'secondary',
     [ styles.tag_view_transparent ]: view === 'transparent',
     [ styles.tag_view_success ]: view === 'success',
     [ styles.tag_view_attention ]: view === 'attention',

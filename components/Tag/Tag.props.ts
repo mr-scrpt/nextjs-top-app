@@ -6,5 +6,5 @@ export interface TagProps
   HTMLDivElement>
   {
     size?: 's' | 'm' | 'l' | 'xl',
-    view?: 'primary' | 'transparent' | 'success' | 'attention' | 'error'
+    view?: 'primary' | 'secondary' | 'transparent' | 'success' | 'attention' | 'error'
   }
