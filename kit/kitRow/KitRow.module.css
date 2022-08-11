@@ -12,9 +12,13 @@
 }
 
 .kitRow__title {
+  min-width: 200px;
+
+  text-align: right;
+
   color: green;
 }
 
 .kitRow__item {
-  color: yellow;
+  width: calc(100% - 200px);
 }

@@ -1,0 +1,43 @@
+.paragraph {
+  font-weight: 400;
+}
+
+.paragraph.paragraph_size_s {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.paragraph.paragraph_size_m {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.paragraph.paragraph_size_l {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.paragraph.paragraph_size_xl {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.paragraph.paragraph_view_i {
+  font-style: italic;
+}
+
+.paragraph.paragraph_view_b_300 {
+  font-weight: 300;
+}
+
+.paragraph.paragraph_view_b_500 {
+  font-weight: 500;
+}
+
+.paragraph.paragraph_view_b_600 {
+  font-weight: 600;
+}
+
+.paragraph.paragraph_view_b_700 {
+  font-weight: 700;
+}

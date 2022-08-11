@@ -1,9 +1,9 @@
 import { TitleProps } from './Title.props';
 import styles from './Title.module.css';
-import cx from 'classnames';
+import cn from 'classnames';
 export const Title = ({ tag, children, className, ...props }:TitleProps): JSX.Element => {
   
-  const titleClass = cx(styles.title, className, {
+  const titleClass = cn(styles.title, className, {
     [ styles.title_main ]: tag ==='h1',
     [ styles.title_middle ]: tag ==='h2',
     [ styles.title_sub ]: tag ==='h3',

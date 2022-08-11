@@ -3,6 +3,7 @@ import { KitButtons } from '../KitButtons/KitButtons';
 import styles from './KitWrapp.module.css';
 import { KitWrapProps } from './KitWrapp.props';
 import cn from 'classnames';
+import { KitParagraph } from '../KitParagraph/KitParagrap';
 export const KitWrapp = ({ className }:KitWrapProps): JSX.Element => {
 	const kitWrappClass = cn(styles.kitWrapp, {}, className);
   return (
@@ -12,22 +13,7 @@ export const KitWrapp = ({ className }:KitWrapProps): JSX.Element => {
         <div className={ styles.kitWrapp__body }>
 							
           <KitButtons className={ styles.kitWrapp__section } />
-          {/*  <KitSection
-            name="Кнопка"
-            className={ styles.kit__section }
-					>
-            <KitBox name='Вид кнопок'>
-              <KitRow name="Простая кнопка">
-                <Button
-                  view='primary'
-                  size='l'
-          >
-                  Кнопка
-                </Button>
-              </KitRow>
-            </KitBox>
-          </KitSection> */}
-
+          <KitParagraph className={ styles.kitWrapp__section } />
         </div>
       </div>
     </div>
