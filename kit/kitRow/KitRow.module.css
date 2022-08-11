@@ -1,0 +1,20 @@
+.kitRow {
+  margin: 0;
+}
+
+.kitRow__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 15px;
+}
+
+.kitRow__title {
+  color: green;
+}
+
+.kitRow__item {
+  color: yellow;
+}

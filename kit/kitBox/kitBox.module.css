@@ -1,3 +1,33 @@
-.kitBox {
-	margin: 0;
+/* .kitBox {
+
+} */
+
+.kitBox__inner {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 15px;
+
+  background-color: var(--light);
+}
+
+.kitBox__body {
+  width: 100%;
+  margin: 0;
+}
+
+.kitBox__title {
+  width: 100%;
+  margin-bottom: 15px;
+
+  color: var(--dark);
+
+  font-size: 18px;
+}
+
+.kitBox__row {
+  margin: 0;
+
+  border: 1px solid var(--gray-light);
+  border-bottom: none;
 }

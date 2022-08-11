@@ -1,13 +1,10 @@
 import type { NextPage } from 'next';
-import { KitButtons } from '../kit/kitButtons/kitButtons';
-import { Section } from '../kit/section/Section';
+import { KitWrapp } from '../kit/KitWrapp/KitWrapp';
 
 const Kit: NextPage = () => {
 
   return (
-      <Section name='Кнопки'>
-          <KitButtons />
-      </Section>
+    <KitWrapp className="page__wrap"/>
   );
 };
 

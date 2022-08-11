@@ -1,0 +1,30 @@
+.kitWrapp {
+  display: flex;
+  flex-direction: column;
+}
+
+.kitWrapp__inner {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0 40px;
+}
+
+.kitWrapp__title {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.kitWrapp__body {
+  width: 100%;
+}
+
+.kitWrapp__section {
+  margin: 0;
+}

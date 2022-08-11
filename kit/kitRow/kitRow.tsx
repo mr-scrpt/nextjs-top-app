@@ -1,11 +1,14 @@
-import { KitRowProps } from './kitRow.props';
-
-export const KitRow = ({ children, name }: KitRowProps):JSX.Element =>{
-
+import { KitRowProps } from './KitRow.props';
+import cn from 'classnames';
+import styles from './kitRow.module.css';
+export const KitRow = ({ children, name, className }: KitRowProps):JSX.Element =>{
+  const kitRowClass = cn(styles.kitRow, {}, className);
   return(
-      <div className="">
-          <div className="">{name}</div>
-          <div className="">{children}</div>
+    <div className={ kitRowClass }>
+      <div className={ styles.kitRow__inner }>
+        <div className={ styles.kitRow__item }>{children}</div>
+        <div className={ styles.kitRow__title }>{name}</div>
       </div>
+    </div>
   );
 };

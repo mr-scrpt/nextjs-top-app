@@ -1,22 +1,22 @@
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 
-	color: var(--dark);
-	background-color: var(--light);
+  color: var(--dark);
+  background-color: var(--light);
 
-	font-family: var(--font-family);
+  font-family: var(--font-family);
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 
-	color: inherit;
+  color: inherit;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -31,14 +31,27 @@ a {
 } */
 
 :root {
-	--dark: #3B434E;
-	--light: #FFF;
-	--primary: #7653FC;
-	--primary-light: #896CFB;
-	--accept: #1DC37E;
-	--accept-light: rgba(var(--accept, 0.8));
-	--attantion: #FC836D;
-	--gray-light: #EBEBEB;
-	--font-family: "Noto Sans", sans-serif;
-	--tr: 0.25s;
+  --dark: #3B434E;
+  --light: #FFF;
+  --primary: #7653FC;
+  --primary-light: #896CFB;
+  --primary-light-2: #B9AAF7;
+  --accept: #1DC37E;
+  --accept-light: #5DE5AC;
+  --attantion: #FC836D;
+  --gray-light: #EBEBEB;
+  --font-family: "Noto Sans", sans-serif;
+  --tr: 0.25s;
+}
+
+.page {
+  margin: 0;
+  padding: 0;
+}
+
+.page__wrap {
+  width: 100%;
+  max-width: 1440px;
+  padding-right: 15px;
+  padding-left: 15px;
 }

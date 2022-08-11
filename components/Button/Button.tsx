@@ -1,8 +1,18 @@
 import { ButtonProps } from './Button.props';
 import cx from 'classnames';
 import styles from './Button.module.css';
-import IconArrow from './icon_arrow.svg';
-export const Button = ({ view, size, children, arrow='none', className, iconPosition, mode='standat', ...props }: ButtonProps): JSX.Element => {
+
+export const Button = ({ 
+    view,
+    size,
+    children,
+    includeIcon=null,
+    className,
+    iconPosition, 
+    mode='standat', 
+    iconRotate, 
+    ...props
+ }: ButtonProps): JSX.Element => {
 
   const buttonClass = cx(styles.button, className, {
     [ styles.button_view_primary ]: view === 'primary',
@@ -17,22 +27,25 @@ export const Button = ({ view, size, children, arrow='none', className, iconPosi
 
     [ styles.button_icon_position_right ]: iconPosition === 'right',
     [ styles.button_icon_position_left ]: iconPosition === 'left',
+    [ styles.button_icon_rotate_90 ]: iconRotate == '90',
+    [ styles.button_icon_rotate_180 ]: iconRotate == '180',
+    [ styles.button_icon_rotate_270 ]: iconRotate == '270',
   });
   const iconClass = cx(styles.icon);
 
   const button = (
-      <button className={ buttonClass }
-        { ...props }>
-          {arrow != 'none' &&
-          <span 
-            className={ iconClass }
+    <button className={ buttonClass }
+      { ...props }>
+      {includeIcon &&
+      <span 
+        className={ iconClass }
             >
-              <IconArrow></IconArrow>
-          </span>
+        {includeIcon}
+      </span>
           }
-          <span className={ styles.button__text }>{children}</span>
+      <span className={ styles.button__text }>{children}</span>
           
-      </button>
+    </button>
 );
   return button;
 };
