@@ -23,9 +23,8 @@
   padding-right: 15px;
   padding-left: 15px;
 
-  color: var(--attantion);
+  color: var(--attention);
 
-  /* border-bottom: 2px solid var(--attantion); */
   background: var(--light);
 
   font-size: 22px;

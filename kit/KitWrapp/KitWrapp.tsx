@@ -4,6 +4,7 @@ import styles from './KitWrapp.module.css';
 import { KitWrapProps } from './KitWrapp.props';
 import cn from 'classnames';
 import { KitParagraph } from '../KitParagraph/KitParagrap';
+import { KitTag } from '../KitTag/KitTag';
 export const KitWrapp = ({ className }:KitWrapProps): JSX.Element => {
 	const kitWrappClass = cn(styles.kitWrapp, {}, className);
   return (
@@ -13,7 +14,10 @@ export const KitWrapp = ({ className }:KitWrapProps): JSX.Element => {
         <div className={ styles.kitWrapp__body }>
 							
           <KitButtons className={ styles.kitWrapp__section } />
+
           <KitParagraph className={ styles.kitWrapp__section } />
+          
+          <KitTag className={ styles.kitWrapp__section } />
         </div>
       </div>
     </div>

@@ -5,5 +5,6 @@ export interface TagProps
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement>
   {
-
+    size?: 's' | 'm' | 'l' | 'xl',
+    view?: 'primary' | 'transparent' | 'success' | 'attention' | 'error'
   }
