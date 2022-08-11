@@ -34,16 +34,20 @@ export const Button = ({
   const iconClass = cx(styles.icon);
 
   const button = (
-    <button className={ buttonClass }
-      { ...props }>
+    <button
+      className={ buttonClass }
+      { ...props }
+    >
       {includeIcon &&
-      <span 
-        className={ iconClass }
-            >
-        {includeIcon}
-      </span>
-          }
-      <span className={ styles.button__text }>{children}</span>
+        <span 
+          className={ iconClass }
+        >
+          {includeIcon}
+        </span>
+      }
+      {children && 
+        <span className={ styles.button__text }>{children}</span>
+      }
           
     </button>
 );

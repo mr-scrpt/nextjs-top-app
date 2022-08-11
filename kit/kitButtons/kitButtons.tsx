@@ -139,6 +139,23 @@ export const KitButtons = ({ className }:KitButtonsProps):JSX.Element =>{
 
       </KitBox>
 
+      <KitBox
+        name='Button only icon'
+      >
+        
+        <KitRow name='without children'>
+          <Button
+            view='primary'
+            size='l'
+            includeIcon={ <IconArrow /> }
+            iconPosition='right'
+          > 
+            
+          </Button>
+        </KitRow>
+
+      </KitBox>
+
     </KitSection>
     
   );
