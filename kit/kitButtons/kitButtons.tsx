@@ -1,5 +1,5 @@
 import { Button } from '../../components';
-import { IconArrow } from '../../components/Icons/Icons';
+import { IconArrow } from '../../components';
 import { KitBox } from '../KitBox/KitBox';
 
 import { KitRow } from '../KitRow/KitRow';

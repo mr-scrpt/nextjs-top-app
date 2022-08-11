@@ -53,9 +53,9 @@
 /* Views */
 
 .tag.tag_view_primary .tag__inner {
-  color: var(--light);
+  color: var(--primary);
   border-color: var(--primary);
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 .tag.tag_view_secondary .tag__inner {
@@ -91,8 +91,8 @@
 /* Views HOVER */
 .tag.tag_view_primary:hover .tag__inner {
   color: var(--light);
-  border-color: var(--primary);
-  background-color: var(--primary-light);
+
+  background-color: var(--primary);
 }
 
 .tag.tag_view_secondary:hover .tag__inner {

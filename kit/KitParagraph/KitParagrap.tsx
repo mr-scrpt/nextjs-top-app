@@ -1,4 +1,4 @@
-import { Paragraph } from '../../components/Paragraph/Paragraph';
+import { Paragraph } from '../../components';
 import { KitBox } from '../KitBox/KitBox';
 import { KitRow } from '../KitRow/KitRow';
 import { KitSection } from '../KitSection/KitSection';
