@@ -14,6 +14,7 @@ const Home: NextPage = () => {
       <Rating 
         setRating={ setRating }
         ratingCurrent={ rating }
+        
         isEditable={ true }/>
     </>
       

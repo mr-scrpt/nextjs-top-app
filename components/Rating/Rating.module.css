@@ -3,6 +3,12 @@
 
 .rating__inner {
   display: flex;
+
+  margin: 0 -5px;
+}
+
+.rating__icon {
+  padding: 5px;
 }
 
 .rating__icon_dafault {

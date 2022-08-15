@@ -11,7 +11,7 @@ export const Rating = ( {
   className
  }: RatingProps ) : JSX.Element => {
   
-  const [ ratingArray ] = useState<string[]>(new Array(ratingMax).fill(''));
+  const [ ratingArray ] = useState<number[]>(Array.from({ length: ratingMax }, (v, i) => i) );
   const [ ratingActual, setRatingActual ] = useState<number>(ratingCurrent);
   useEffect(() => {
     setRatingActual(ratingCurrent);
@@ -58,18 +58,20 @@ export const Rating = ( {
     <div className={ ratingClass }>
       <div className={ styles.rating__inner }>
        
-        {ratingArray.map((_, idx)=> (
-          <>
+        {ratingArray.map((v,  idx )=> (
+          <span 
+            className={ isIconActive( idx < ratingActual ) }
+            key={ v }
+            onMouseOver={ (): void=> { onHover(idx + 1);} }
+            onMouseLeave={ (): void=> { onLeave(ratingCurrent);} }
+            onClick={ (): void => { setOuterRating(idx + 1);} }
+          >
             <IconStar
-              className={ isIconActive( idx < ratingActual ) }
-              key={ idx }
-              onMouseOver={ (): void=> { onHover(idx+1);} }
-              onMouseLeave={ (): void=> { onLeave(ratingCurrent);} }
-              onClick={ (): void => { setOuterRating(idx + 1);} }
+              className={ styles.rating__svg }
               tabIndex={ tabIndexEnable(isEditable) }
               onKeyDown={ (e: KeyboardEvent<SVGAElement>): void =>{ onHandleSpace(idx + 1, e); } }
           />
-          </>
+          </span>
           )
         )}
         
