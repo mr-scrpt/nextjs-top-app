@@ -1,2 +1,3 @@
 import IconArrow from './icons/icon_arrow.svg';
-export { IconArrow };
+import IconStar from './icons/icon_star.svg';
+export { IconArrow, IconStar };

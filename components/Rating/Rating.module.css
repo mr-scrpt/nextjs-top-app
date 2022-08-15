@@ -1,0 +1,18 @@
+/* .rating {
+} */
+
+.rating__inner {
+  display: flex;
+}
+
+.rating__icon_dafault {
+  fill: var(--gray-light);
+}
+
+.rating__icon_active {
+  fill: var(--primary);
+}
+
+.rating.rating_is_editable .rating__icon {
+  cursor: pointer;
+}
