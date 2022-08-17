@@ -1,0 +1,35 @@
+.footer {
+
+}
+
+.footer__inner {
+  display: grid;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  grid-area: inner;
+  grid-template-columns: 1fr auto;
+
+  grid-template-areas: "copyright menu";
+}
+
+.footer__copyright {
+  grid-area: copyright;
+
+  color: var(--light);
+}
+
+.footer__menu {
+  grid-area: menu;
+}
+
+@media (max-width: 768px) {
+  .footer__inner {
+    gap: 15px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "copyright" "menu";
+
+    justify-items: center;
+  }
+}

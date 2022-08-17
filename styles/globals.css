@@ -47,6 +47,7 @@ a {
   --gray-light: #EBEBEB;
   --font-family: "Noto Sans", sans-serif;
   --tr: 0.25s;
+  --bp-768: 768px;
 }
 
 .page {

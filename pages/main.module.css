@@ -1,0 +1,11 @@
+.page {
+  margin: 0;
+  padding: 0;
+}
+
+.page_theme {
+  color: var(--dark);
+  background: var(--light);
+
+  font-family: Roboto, sans-serif;
+}

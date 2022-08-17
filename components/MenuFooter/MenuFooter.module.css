@@ -1,0 +1,36 @@
+.menu-footer {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-footer__inner {
+  display: flex;
+}
+
+.menu-footer__item {
+  transition: color var(--tr);
+
+  color: var(--light);
+}
+
+.menu-footer__item:hover {
+  color: var(--attention);
+}
+
+.menu-footer__text {
+  padding: 0 15px;
+}
+
+@media (max-width: 994px) {
+  .menu-footer__inner {
+    display: flex;
+
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-footer__inner {
+    align-items: center;
+  }
+}

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Title } from '../components';
 
 import { Rating } from '../components/Rating';
+import { withLayoutMain } from '../layout/LayoutHOC/LayoutMainHOC';
 
 const Home: NextPage = () => {
   const [ rating, setRating ] = useState<number>(2);
@@ -16,9 +17,9 @@ const Home: NextPage = () => {
         ratingCurrent={ rating }
         
         isEditable={ true }/>
+    
     </>
-      
   );
 }; 
 
-export default Home;
+export default withLayoutMain(Home);
