@@ -1,11 +1,15 @@
-import type { NextPage } from 'next';
+import axios, { AxiosResponse } from 'axios';
+import type { GetStaticProps, NextPage } from 'next';
 import { useState } from 'react';
 import { Title } from '../components';
 
 import { Rating } from '../components/Rating';
+import { MenuItemSectionInterface } from '../interfaces/api/menu.interface';
+
+import { HomePageInterface } from '../interfaces/pages/homePage.interface';
 import { withLayoutMain } from '../layout/LayoutHOC/LayoutMainHOC';
 
-const Home: NextPage = () => {
+const Home: NextPage<HomePageInterface> = ({ menu } : HomePageInterface) => {
   const [ rating, setRating ] = useState<number>(2);
   
   return (
@@ -17,9 +21,27 @@ const Home: NextPage = () => {
         ratingCurrent={ rating }
         
         isEditable={ true }/>
-    
+      <ul>
+        {menu.map(item => (
+          <li key={ item._id.secondCategory }>{item._id.secondCategory}</li>
+        ))}
+      </ul>
     </>
   );
 }; 
 
 export default withLayoutMain(Home);
+
+export const getStaticProps: GetStaticProps<HomePageInterface> = async () => {
+  
+  const categoryFirst = 0;
+  const { data: menu }: AxiosResponse<MenuItemSectionInterface[]> = await axios.post('https://courses-top.ru/api/top-page/find', {
+    firstCategory: categoryFirst
+  });
+  return {
+    props: {
+      categoryFirst,
+      menu
+    }
+  };
+ };
