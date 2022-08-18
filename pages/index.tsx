@@ -35,7 +35,7 @@ export default withLayoutMain(Home);
 export const getStaticProps: GetStaticProps<HomePageInterface> = async () => {
   
   const categoryFirst = 0;
-  const { data: menu }: AxiosResponse<MenuItemSectionInterface[]> = await axios.post('https://courses-top.ru/api/top-page/find', {
+  const { data: menu }: AxiosResponse<MenuItemSectionInterface[]> = await axios.post(`${ process.env.NEXT_PUBLIC_DOMAIN }/api/top-page/find`, {
     firstCategory: categoryFirst
   });
   return {
